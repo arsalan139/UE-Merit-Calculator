@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UE Merit Calculator By Arsalan</title>
+</head>
+
+<body>
+
+<div class="mcontainer" style="text-align: center;">
+    <h1 style="text-align: center;">Check your Aggregate Score with percentage</h1>
+    
+    <form >
+    <h2 style="text-align: center; color:white; background-color:green; background-position: center;">For Undergraduate Students</h2>
+     <div class="mrow">
+      <div class="mcol-25">
+      <label for="matric"">Enter Your Matric Percentage</label>
+      </div>
+    <div class="mcol-75">       
+    <input type="text" id="matric" name="matric" value="" placeholder="Enter without Percent Sign" required>
+    </div>
+    </div>
+</br>
+    <div class="mrow">
+      <div class="mcol-25">
+      <label for="fsc">Enter Your Intermediate Percentage</label>
+      </div>
+    <div class="mcol-75">       
+    <input type="text" id="fsc" name="fsc" value="" placeholder="Enter without Percent Sign" required>
+    </div>
+    </div>
+        <button type="button" class="button button1">Calculate</button>   
+    
+</form>
+    </br>
+</br>
+    <form >
+    <h2 style="text-align: center;color:white; background-color:green; background-position: center; ">For Postgraduate Students</h2>
+     <div class="mrow">
+      <div class="mcol-25">
+      <label for="matric"">Enter Your Matric Percentage</label>
+      </div>
+    <div class="mcol-75">       
+    <input type="text" id="matric" name="matric" value="" placeholder="Enter without Percent Sign" required>
+    </div>
+    </div>
+</br>
+    <div class="mrow">
+      <div class="mcol-25">
+      <label for="fsc">Enter Your Intermediate Percentage</label>
+      </div>
+    <div class="mcol-75">       
+    <input type="text" id="fsc" name="fsc" value="" placeholder="Enter without Percent Sign" required>
+    </div>
+    </div>
+</br>
+    <div class="mrow">
+      <div class="mcol-25">
+      <label for="cgpa">Enter Your Obtained CGPA in BA/BSC</label>
+      </div>
+    <div class="mcol-75">       
+    <input type="text" id="cgpa" name="cgpa" value="" required>
+    </div>
+    </div>
+
+        <button type="button" class="button button2">Calculate</button>   
+    
+</form>
+
+</div>
+<script>
+    var pressedButton = document.getElementsByClassName("button1")[0];
+   pressedButton.addEventListener("click", function (event) {
+    var input = document.getElementById("matric").value;
+    var input2 = document.getElementById("fsc").value;
+    var matAggregateU=(input/100)*30;
+    var fscAggregateU=(input2/100)*70;
+    var AggregateU=matAggregateU+fscAggregateU;
+    alert("Your Aggregate is: "+ AggregateU);
+   })
+
+    var pressedButton = document.getElementsByClassName("button2")[0];
+    pressedButton.addEventListener("click", function (event) {
+    var input = document.getElementById("matric").value;
+    var input2 = document.getElementById("fsc").value;
+    var input3 = document.getElementById("cgpa").value;
+    var matAggregateP=(input/100)*20;
+    var fscAggregateP=(input2/100)*30;
+    var gpa=(input3/4)*50;
+    var AggregateP=matAggregateP+fscAggregateP+gpa;
+    alert("Your Aggregate is: "+ AggregateP);
+   })
+    
+</script>
+
+</body>
+
+
+</html>
